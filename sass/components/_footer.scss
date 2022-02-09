@@ -102,13 +102,13 @@
         padding: 0 2rem;
         font-size: 1.3rem;
         color: $dark-gray;
+        text-align: center;
 
         a {
             color: hsl(0, 0%, 89%);
         }
 
         @media screen and (max-width: 50rem) {
-            text-align: center;
             padding-bottom: 1rem;
         }
     }
