@@ -70,5 +70,15 @@
             display: block;
             cursor: pointer;
         }
+
+        &__banner {
+            @include flex(center, center);
+            padding-left: 0;
+
+            .banner-content {
+                padding: 2rem 1rem;
+                font-size: 4rem;
+            }
+        }
     }
 }
