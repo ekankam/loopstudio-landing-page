@@ -4,7 +4,7 @@
 .creation {
     &__header {
         @include flex(center, space-between);
-        margin: 8rem 0 3rem;
+        margin: 10rem 0 5rem;
         font-family: $header-font;
 
         .text {
@@ -40,7 +40,7 @@
 
         .article {
             position: relative;
-            height: 40rem;
+            height: 50rem;
             cursor: pointer;
             transition: 300ms ease-in-out;
             overflow: hidden;
@@ -210,7 +210,7 @@
             }
         }
 
-        @media screen and (max-width: 90rem) {
+        @media screen and (max-width: 70rem) {
             grid-template-columns: repeat(3, 1fr);
         }
         @media screen and (max-width: 68.4rem) {
@@ -233,6 +233,55 @@
                 .article-content {
                     font-size: 4rem;
                 }
+            }
+
+            .article-1 {
+                background: url('/public/images/mobile/image-deep-earth.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .article-2 {
+                background: url('/public/images/mobile/image-night-arcade.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .article-3 {
+                background: url('/public/images/mobile/image-soccer-team.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .article-4 {
+                background: url('/public/images/mobile/image-grid.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .article-5 {
+                background: url('/public/images/mobile/image-from-above.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .article-6 {
+                background: url('/public/images/mobile/image-pocket-borealis.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .article-7 {
+                background: url('/public/images/mobile/image-curiosity.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .article-8 {
+                background: url('/public/images/mobile/image-fisheye.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
             }
         }
     }
