@@ -6,9 +6,26 @@
     justify-content: $justify-contents;
 }
 
+@mixin nav-item {
+    position: relative;
+    cursor: pointer;
+
+    &:hover::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -1rem;
+        transform: translateX(-50%);
+        width: 1.8rem;
+        height: 3px;
+        background-color: $white;
+        border-radius: 5rem;
+    }
+}
+
 @mixin button($letter-spacing) {
     padding: 1.2rem 3rem;
-    border: 1px solid $black;
+    border: 2px solid $black;
     font-family: inherit;
     text-transform: uppercase;
     letter-spacing: $letter-spacing;
