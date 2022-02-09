@@ -1,5 +1,23 @@
+@use './variables' as *;
+
 @mixin flex($align-items, $justify-contents) {
     display: flex;
     align-items: $align-items;
     justify-content: $justify-contents;
+}
+
+@mixin button($letter-spacing) {
+    padding: 1.2rem 3rem;
+    border: 1px solid $black;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+    background-color: $white;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
 }

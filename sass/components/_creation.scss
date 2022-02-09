@@ -1,0 +1,239 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.creation {
+    &__header {
+        @include flex(center, space-between);
+        margin: 8rem 0 3rem;
+        font-family: $header-font;
+
+        .text {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .creation-btn {
+            @include button(1px);
+        }
+        @media screen and (max-width: 50rem) {
+            justify-content: center;
+
+            .text {
+                font-size: 4rem;
+            }
+
+            .creation-btn {
+                display: none;
+            }
+        }
+    }
+
+    &__grid-box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        .creation-btn {
+            display: none;
+        }
+
+        .article {
+            position: relative;
+            height: 40rem;
+            cursor: pointer;
+            transition: 300ms ease-in-out;
+            overflow: hidden;
+
+            &:hover::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: hsla(0, 0%, 100%, 0.575);
+            }
+
+            &:hover {
+                transform: scale(1.02);
+
+                .article-content {
+                    color: $black;
+                    z-index: 100;
+                }
+            }
+        }
+
+        .article-1 {
+            background: url('/public/images/desktop/image-deep-earth.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .article-2 {
+            background: url('/public/images/desktop/image-night-arcade.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .article-3 {
+            background: url('/public/images/desktop/image-soccer-team.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .article-4 {
+            background: url('/public/images/desktop/image-grid.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .article-5 {
+            background: url('/public/images/desktop/image-from-above.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .article-6 {
+            background: url('/public/images/desktop/image-pocket-borealis.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .article-7 {
+            background: url('/public/images/desktop/image-curiosity.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .article-8 {
+            background: url('/public/images/desktop/image-fisheye.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .article-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 4rem;
+
+                font-family: $header-font;
+                font-size: 2.5rem;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+
+        @media screen and (max-width: 90rem) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 68.4rem) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 50rem) {
+            grid-template-columns: 1fr;
+
+            .creation-btn {
+                display: block;
+                width: 20rem;
+                font-size: 1.7rem;
+                margin: 1rem auto;
+                @include button(5px);
+            }
+
+            .article {
+                height: 30rem;
+
+                .article-content {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}

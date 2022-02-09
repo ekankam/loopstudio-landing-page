@@ -198,4 +198,240 @@ body {
   }
 }
 
+.creation__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8rem 0 3rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+.creation__header .text {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.creation__header .creation-btn {
+  padding: 1.2rem 3rem;
+  border: 1px solid black;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: white;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.creation__header .creation-btn:hover {
+  background-color: black;
+  color: white;
+}
+@media screen and (max-width: 50rem) {
+  .creation__header {
+    justify-content: center;
+  }
+  .creation__header .text {
+    font-size: 4rem;
+  }
+  .creation__header .creation-btn {
+    display: none;
+  }
+}
+.creation__grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.creation__grid-box .creation-btn {
+  display: none;
+}
+.creation__grid-box .article {
+  position: relative;
+  height: 40rem;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+}
+.creation__grid-box .article:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.575);
+}
+.creation__grid-box .article:hover {
+  transform: scale(1.02);
+}
+.creation__grid-box .article:hover .article-content {
+  color: black;
+  z-index: 100;
+}
+.creation__grid-box .article-1 {
+  background: url("/public/images/desktop/image-deep-earth.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-1 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.creation__grid-box .article-2 {
+  background: url("/public/images/desktop/image-night-arcade.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-2 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.creation__grid-box .article-3 {
+  background: url("/public/images/desktop/image-soccer-team.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-3 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.creation__grid-box .article-4 {
+  background: url("/public/images/desktop/image-grid.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-4 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.creation__grid-box .article-5 {
+  background: url("/public/images/desktop/image-from-above.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-5 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.creation__grid-box .article-6 {
+  background: url("/public/images/desktop/image-pocket-borealis.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-6 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.creation__grid-box .article-7 {
+  background: url("/public/images/desktop/image-curiosity.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-7 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.creation__grid-box .article-8 {
+  background: url("/public/images/desktop/image-fisheye.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.creation__grid-box .article-8 .article-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 90rem) {
+  .creation__grid-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 68.4rem) {
+  .creation__grid-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 50rem) {
+  .creation__grid-box {
+    grid-template-columns: 1fr;
+  }
+  .creation__grid-box .creation-btn {
+    display: block;
+    width: 20rem;
+    font-size: 1.7rem;
+    margin: 1rem auto;
+    padding: 1.2rem 3rem;
+    border: 1px solid black;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+  }
+  .creation__grid-box .creation-btn:hover {
+    background-color: black;
+    color: white;
+  }
+  .creation__grid-box .article {
+    height: 30rem;
+  }
+  .creation__grid-box .article .article-content {
+    font-size: 4rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
