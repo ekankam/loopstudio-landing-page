@@ -1,0 +1,50 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
+
+    &__header {
+        width: 100%;
+        padding: 3rem 2rem;
+        @include flex(center, space-between);
+
+        .close-icon {
+            cursor: pointer;
+        }
+    }
+
+    &__nav-items {
+        margin-top: 3rem;
+        padding: 3rem 2rem;
+        list-style: none;
+        font-family: $header-font;
+        color: $white;
+
+        .nav-item {
+            padding: 2rem 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 300ms ease-in-out;
+
+            &:hover {
+                color: $dark-gray;
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+.show {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+}

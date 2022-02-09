@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color: white;
+  font-family: "Alata", sans-serif;
+}
+
+.centered {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url(../../public/images/desktop/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+}
+.header__navbar .nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  list-style: none;
+}
+.header__navbar .nav-items .nav-item {
+  position: relative;
+  cursor: pointer;
+}
+.header__navbar .nav-items .nav-item:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  transform: translateX(-50%);
+  width: 1.8rem;
+  height: 3px;
+  background-color: white;
+  border-radius: 5rem;
+}
+.header__navbar .toggle-menu {
+  display: none;
+}
+@media screen and (max-width: 68.4em) {
+  .header__navbar .nav-items {
+    display: none;
+  }
+  .header .toggle-menu {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
+.mobile-menu__header {
+  width: 100%;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-menu__header .close-icon {
+  cursor: pointer;
+}
+.mobile-menu__nav-items {
+  margin-top: 3rem;
+  padding: 3rem 2rem;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+}
+.mobile-menu__nav-items .nav-item {
+  padding: 2rem 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+}
+.mobile-menu__nav-items .nav-item:hover {
+  color: #8c8c8c;
+  transform: translateX(10px);
+}
+
+.show {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+/*# sourceMappingURL=main.css.map */
